@@ -1,7 +1,5 @@
 import * as React from "react";
 import NextImage, { ImageProps as NextImageProps } from "next/image";
-import { preloadImage } from "../../utils/customPreload";
-import styles from "../styles/Home.module.css";
 
 interface IImageProps {
   id?: string;
@@ -31,14 +29,12 @@ const Image = React.forwardRef<HTMLDivElement, IImageProps>(
       src,
       alt,
       title,
-      fallbackImage,
       width,
       height,
       priority,
       customPreload,
       layout = "fixed",
       testId,
-      checkBrokenImageInCustomPreload,
       // CHECK WITH GABY IF HE IS STILL USING THESE PARAMETERS
       onSuccess,
       onError,
